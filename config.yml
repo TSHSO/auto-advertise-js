@@ -1,6 +1,6 @@
 default:
-  token: 'put your token here'
-  interval: 60 # How many minutes to wait before sending another batch of messages (Default: 60)
+  token: '1229115840633507880'
+  interval: 30 # How many minutes to wait before sending another batch of messages (Default: 60)
 
   # This setting overrides the 'interval' value set above
   randomize_interval:
@@ -14,22 +14,21 @@ default:
     maximum_interval: 5 # Maximum interval in seconds (Default: 5)
 
   avoid_spam:
-    enabled: false # If set to true, the script prevents double-posting (Default: false)
-    # Set both minimum and maximum to the same number if you want to only post when that number is reached, and not randomize
+    enabled: true # If set to true, the script prevents double-posting (Default: false)
     minimum_messages: 2 # Minimum amount of messages other people post before you repost yours. (Default: 2)
     maximum_messages: 2 # Maximum amount of messages other people post before you repost yours. (Default: 2)
 
   work_hours:
-    enabled: false # Make the script work only between the hours set below (Default: false)
-    start_time: 8 # Start hour (0-23, Default: 7)
-    end_time: 22 # End hour (0-23, Default: 22) 
+    enabled: false # Disabling work hours to allow the script to run 24/7
 
   multiple_messages: 
-    enabled: true # If set to true, the script will choose random .txt message file from /messages/ (Default: false)
-    mode: 0 # 0 - choose random message file | 1 - sorts the messages (message1.txt, message2.txt etc), sends them all into one channel (Default: 0)
+    enabled: false # Disabled multiple messages, reading a single message from the file instead
 
   wait_before_start: 0 # How many minutes to wait before starting the script (Default: 0)
   debug_mode: true # If set to true, you will get a log in the console every time a message is sent (Default: false)
+
+  message_file: 'message1.txt' # Path to the message file in the project folder
+  
   channels: # Channels where to send the message
+    - '1145771692099121206'
     - 'xxxxxxxxxxxxxxxxxxx'
-    - 'xxxxxxxxxxxxxxxxxxx' # etc
